@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — xthabao1</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Cinzel:wght@600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="stage">
+
+    <!-- ── Panel a: narrow portrait ── -->
+    <div class="window panel-a">
+      <div class="avatar-wrap" onclick="openLightbox('avatar.jpg')">
+        <img src="avatar.jpg" alt="Bui Ha Gia Bao">
+        <div class="avatar-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+
+      <div class="name">Bui Ha Gia Bao</div>
+      <div class="tagline">10A1 · K66<br>Le Loi High School</div>
+
+      <div class="divider"><span class="divider-gem">&#10022;</span></div>
+
+      <ul class="info-list">
+        <li class="info-item">
+          <span class="ico"><i class="fas fa-envelope"></i></span>
+          <div>
+            <div class="label">Email</div>
+            <div class="val">xthabao&#64;gmail.com</div>
+          </div>
+        </li>
+        <li class="info-item">
+          <span class="ico"><i class="fas fa-phone"></i></span>
+          <div>
+            <div class="label">Phone</div>
+            <div class="val">(+84) 845 834 919</div>
+          </div>
+        </li>
+        <li class="info-item">
+          <span class="ico"><i class="fas fa-cake-candles"></i></span>
+          <div>
+            <div class="label">Birthday</div>
+            <div class="val">20 / 03 / 2010</div>
+          </div>
+        </li>
+        <li class="info-item">
+          <span class="ico"><i class="fas fa-location-dot"></i></span>
+          <div>
+            <div class="label">Address</div>
+            <div class="val">Thanh Hoa, Viet Nam</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ── Panel B: wide main content ── -->
+    <div class="window panel-b">
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="about">
+          <i class="fas fa-user"></i> About
+        </button>
+        <button class="tab-btn" data-tab="resume">
+          <i class="fas fa-scroll"></i> Resume
+        </button>
+        <button class="tab-btn" data-tab="contact">
+          <i class="fas fa-paper-plane"></i> Contact
+        </button>
+      </div>
+
+      <div class="tab-content">
+
+        <!-- About -->
+        <div class="tab-panel active" id="tab-about">
+          <div class="about-text">
+            Hello! I'm <strong>Ha Bao</strong> &mdash; a 10A1 student at Le Loi High School, passionate about the
+            intersection
+            of technology and art. I enjoy creating digital products that are both visually appealing and highly
+            effective, from refined web interfaces to complex software systems. With a creative mindset and a solid
+            technical foundation, I always strive to deliver the best possible experience for end users. I look forward
+            to collaborating and working with you.
+          </div>
+        </div>
+
+        <!-- Resume -->
+        <div class="tab-panel" id="tab-resume">
+          <div class="timeline">
+
+            <div class="tl-item">
+              <div class="tl-card">
+                <div class="tl-time"><i class="fas fa-trophy"></i> 14/12/2025</div>
+                <div class="tl-desc"><strong>&#272;&#7841;t gi&#7843;i Nh&igrave;, m&ocirc;n Tin h&#7885;c. Trong
+                    k&#7923; thi h&#7885;c sinh gi&#7887;i c&aacute;c m&ocirc;n v&#259;n h&oacute;a c&#7845;p t&#7881;nh
+                    n&#259;m h&#7885;c 2025-2026</strong></div>
+                <div class="tl-imgs">
+                  <img class="tl-thumb" src="7.jpg" alt="Award" onclick="openLightbox('7.jpg')">
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-card">
+                <div class="tl-time"><i class="fas fa-star"></i> 17/06/2025</div>
+                <div class="tl-desc"><strong>&#272;&#7841;t Th&#7911; Khoa Ti&#7871;ng Anh, Th&#7911; Khoa To&aacute;n,
+                    &Aacute; Khoa T&#7893;ng trong k&#7923; thi tuy&#7875;n sinh v&agrave;o l&#7899;p 10 THPT</strong>
+                </div>
+                <div class="tl-imgs">
+                  <img class="tl-thumb" src="6.jpg" alt="Award" onclick="openLightbox('6.jpg')">
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-card">
+                <div class="tl-time"><i class="fas fa-medal"></i> 05/2025</div>
+                <div class="tl-desc"><strong>&#272;&#7841;t gi&#7843;i Khuy&#7871;n Kh&iacute;ch trong k&#7923; thi Tin
+                    H&#7885;c Tr&#7867; c&#7845;p t&#7881;nh n&#259;m 2025</strong></div>
+                <div class="tl-imgs">
+                  <img class="tl-thumb" src="5.jpg" alt="Award" onclick="openLightbox('5.jpg')">
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-card">
+                <div class="tl-time"><i class="fas fa-trophy"></i> 14/12/2024</div>
+                <div class="tl-desc"><strong>&#272;&#7841;t gi&#7843;i Nh&igrave;, m&ocirc;n Tin h&#7885;c. Trong
+                    k&#7923; thi h&#7885;c sinh gi&#7887;i c&aacute;c m&ocirc;n v&#259;n h&oacute;a c&#7845;p t&#7881;nh
+                    n&#259;m h&#7885;c 2024-2025</strong></div>
+                <div class="tl-imgs">
+                  <img class="tl-thumb" src="4.jpg" alt="Award" onclick="openLightbox('4.jpg')">
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-card">
+                <div class="tl-time"><i class="fas fa-medal"></i> 05/2024</div>
+                <div class="tl-desc"><strong>&#272;&#7841;t gi&#7843;i Khuy&#7871;n Kh&iacute;ch trong k&#7923; thi Tin
+                    H&#7885;c Tr&#7867; c&#7845;p t&#7881;nh n&#259;m 2024</strong></div>
+                <div class="tl-imgs">
+                  <img class="tl-thumb" src="3.jpg" alt="Award" onclick="openLightbox('3.jpg')">
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-card">
+                <div class="tl-time"><i class="fas fa-trophy"></i> 21/12/2023</div>
+                <div class="tl-desc"><strong>&#272;&#7841;t gi&#7843;i Ba, m&ocirc;n Tin h&#7885;c. Trong k&#7923; thi
+                    h&#7885;c sinh gi&#7887;i c&aacute;c m&ocirc;n v&#259;n h&oacute;a c&#7845;p t&#7881;nh n&#259;m
+                    h&#7885;c 2023-2024</strong></div>
+                <div class="tl-imgs">
+                  <img class="tl-thumb" src="2.jpg" alt="Award" onclick="openLightbox('2.jpg')">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="tab-panel" id="tab-contact">
+          <form class="contact-form" onsubmit="handleSend(event)">
+            <div class="field-group">
+              <label><i class="fas fa-user"></i> Name</label>
+              <input id="c-name" type="text" placeholder="Your name..." required>
+            </div>
+            <div class="field-group">
+              <label><i class="fas fa-envelope"></i> Email</label>
+              <input id="c-email" type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="field-group">
+              <label><i class="fas fa-comment-dots"></i> Message</label>
+              <textarea id="c-msg" placeholder="Write your message..." required></textarea>
+            </div>
+            <button class="btn-send" type="submit">
+              <i class="fas fa-paper-plane"></i> Send
+            </button>
+            <div class="send-status" id="send-status"></div>
+          </form>
+        </div>
+
+      </div><!-- /tab-content -->
+    </div><!-- /panel-b -->
+
+  </div><!-- /stage -->
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightboxBg(event)">
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Close">&#10005;</button>
+    <img id="lb-img" src="" alt="Preview">
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
