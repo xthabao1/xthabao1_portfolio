@@ -3,7 +3,6 @@
    style.css
 ───────────────────────────────────────────── */
 
-/* == Variables == */
 :root {
   --purple: #7c3aed;
   --purple-light: #a855f7;
@@ -16,7 +15,6 @@
   --text-muted: #9d8ec4;
 }
 
-/* == Reset == */
 *,
 *::before,
 *::after {
@@ -26,14 +24,13 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   background: var(--black);
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* == Star canvas == */
 #bg-canvas {
   position: fixed;
   inset: 0;
@@ -41,41 +38,31 @@ body {
   pointer-events: none;
 }
 
-/* == Layout stage == */
 .stage {
   position: relative;
   z-index: 1;
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
-  /* top-aligned: panels grow downward */
+  align-items: stretch;
   justify-content: center;
   gap: 32px;
   padding: 48px 28px 60px;
   flex-wrap: wrap;
 }
 
-/* ============================================
-   Floating windows
-   ============================================ */
 .window {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 16px;
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  box-shadow:
-    0 0 50px rgba(124, 58, 237, 0.12),
-    0 12px 80px rgba(0, 0, 0, 0.75),
-    inset 0 1px 0 rgba(168, 85, 247, 0.12);
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.12), 0 12px 80px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(168, 85, 247, 0.12);
   position: relative;
   overflow: hidden;
-  animation: float 7s ease-in-out infinite;
   display: flex;
   flex-direction: column;
 }
 
-/* ── Window title bar ── */
 .win-bar {
   display: flex;
   align-items: center;
@@ -123,13 +110,10 @@ body {
   letter-spacing: 1.5px;
   color: var(--text-muted);
   text-transform: lowercase;
-  font-family: 'Roboto', monospace;
 }
 
-/* ── Panel a ── */
 .panel-a {
-  width: 300px;
-  animation-delay: 0s;
+  width: 360px;
   flex-shrink: 0;
 }
 
@@ -138,34 +122,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
-/* ── Panel B ── */
 .panel-b {
-  width: min(720px, calc(100vw - 48px));
-  min-height: 580px;
-  animation-delay: 1.4s;
+  width: min(780px, calc(100vw - 48px));
+  height: 680px;
   flex-shrink: 0;
+  align-self: flex-start;
 }
 
 @keyframes float {
 
   0%,
   100% {
-    transform: translateY(0px);
+    transform: translateY(0px)
   }
 
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-14px)
   }
 }
 
-/* ============================================
-   Panel a — Avatar
-   ============================================ */
 .avatar-wrap {
-  width: 136px;
-  height: 136px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   border: 2px solid var(--purple-light);
   box-shadow: 0 0 22px rgba(168, 85, 247, 0.55);
@@ -174,6 +156,7 @@ body {
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
   flex-shrink: 0;
+  margin-top: -16px;
 }
 
 .avatar-wrap:hover {
@@ -206,10 +189,9 @@ body {
   opacity: 1;
 }
 
-/* ── Name & tagline ── */
 .name {
   font-family: 'Cinzel', serif;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   margin-top: 18px;
@@ -218,7 +200,7 @@ body {
 }
 
 .tagline {
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   font-weight: 300;
   color: var(--text-muted);
   text-align: center;
@@ -226,7 +208,6 @@ body {
   line-height: 1.7;
 }
 
-/* ── Divider ── */
 .divider {
   width: 72%;
   height: 1px;
@@ -249,19 +230,18 @@ body {
 
 @keyframes spin-gem {
   0% {
-    text-shadow: 0 0 6px var(--purple-light);
+    text-shadow: 0 0 6px var(--purple-light)
   }
 
   50% {
-    text-shadow: 0 0 16px var(--purple-light);
+    text-shadow: 0 0 16px var(--purple-light)
   }
 
   100% {
-    text-shadow: 0 0 6px var(--purple-light);
+    text-shadow: 0 0 6px var(--purple-light)
   }
 }
 
-/* ── Info list ── */
 .info-list {
   width: 100%;
   list-style: none;
@@ -285,7 +265,7 @@ body {
 }
 
 .info-item .label {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -294,29 +274,27 @@ body {
 
 .info-item .val {
   color: var(--text);
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   font-weight: 400;
   word-break: break-all;
   margin-top: 2px;
 }
 
-/* ============================================
-   Panel B — Tabs
-   ============================================ */
 .tab-bar {
   display: flex;
   border-bottom: 1px solid var(--border);
   padding: 0 20px;
   gap: 2px;
   flex-shrink: 0;
+  align-items: center;
 }
 
 .tab-btn {
   background: none;
   border: none;
   color: var(--text-muted);
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -351,15 +329,55 @@ body {
 
 @keyframes tab-line-in {
   from {
-    transform: scaleX(0);
+    transform: scaleX(0)
   }
 
   to {
-    transform: scaleX(1);
+    transform: scaleX(1)
   }
 }
 
-/* ── Tab content ── */
+/* == Language Switcher == */
+.lang-switcher {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 6px;
+}
+
+.lang-sep {
+  color: var(--border);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 9px;
+  cursor: pointer;
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+
+.lang-btn:hover {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.lang-btn.active {
+  color: var(--purple-light);
+  border-color: var(--purple-light);
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+}
+
 .tab-content {
   flex: 1;
   overflow-y: auto;
@@ -389,20 +407,17 @@ body {
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(10px)
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0)
   }
 }
 
-/* ============================================
-   About
-   ============================================ */
 .about-text {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.95;
   color: var(--text);
@@ -430,9 +445,6 @@ body {
   font-weight: 700;
 }
 
-/* ============================================
-   Resume / Timeline
-   ============================================ */
 .timeline {
   position: relative;
   padding-left: 22px;
@@ -492,7 +504,7 @@ body {
 }
 
 .tl-desc {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--text);
   line-height: 1.75;
@@ -522,9 +534,6 @@ body {
   box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
 }
 
-/* ============================================
-   Contact form
-   ============================================ */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -558,8 +567,8 @@ body {
   border: 1px solid var(--border);
   border-radius: 10px;
   color: var(--text);
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
   font-weight: 400;
   padding: 12px 15px;
   outline: none;
@@ -589,9 +598,9 @@ body {
   border: none;
   border-radius: 10px;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 12px 30px;
@@ -620,9 +629,6 @@ body {
   margin-top: 2px;
 }
 
-/* ============================================
-   Lightbox
-   ============================================ */
 .lightbox {
   display: none;
   position: fixed;
@@ -665,10 +671,7 @@ body {
   transform: scale(1.15);
 }
 
-/* ============================================
-   Responsive
-   ============================================ */
-@media (max-width: 720px) {
+@media (max-width:720px) {
   .stage {
     flex-direction: column;
     align-items: center;
