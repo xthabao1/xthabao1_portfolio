@@ -114,7 +114,9 @@ body {
 
 .panel-a {
   width: 360px;
+  height: 680px;
   flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .panel-a-body {
@@ -124,6 +126,7 @@ body {
   align-items: center;
   justify-content: center;
   flex: 1;
+  overflow-y: auto;
 }
 
 .panel-b {
@@ -685,5 +688,23 @@ body {
 
   .panel-b {
     width: 100%;
+  }
+
+  .tab-bar {
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0 10px;
+  }
+
+  .tab-btn {
+    padding: 12px 12px;
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+  }
+
+  .lang-switcher {
+    margin-left: auto;
+    flex-shrink: 0;
+    padding: 8px 4px;
   }
 }
