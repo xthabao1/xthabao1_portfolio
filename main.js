@@ -127,6 +127,7 @@ const translations = {
     label_address: 'Address',
     about_html: `Hello! I'm <strong>Hà Bảo</strong> — a 10A1 student at Le Loi High School, passionate about the intersection of technology and art. I enjoy creating digital products that are both visually appealing and highly effective, from refined web interfaces to complex software systems. With a creative mindset and a solid technical foundation, I always strive to deliver the best possible experience for end users. I look forward to collaborating and working with you.`,
     tl: [
+      '<strong>2nd Prize — Provincial Young Programmers Contest (Tin Học Trẻ) 2026</strong>',
       '<strong>2nd Prize, Computer Science — Provincial Academic Excellence Competition 2025–2026</strong>',
       '<strong>1st Place English, 1st Place Math, 2nd Place Overall — Grade 10 High School Entrance Exam 2025</strong>',
       '<strong>Consolation Prize — Provincial Young Programmers Contest 2025</strong>',
@@ -154,6 +155,7 @@ const translations = {
     label_address: 'Địa chỉ',
     about_html: `Xin chào! Tôi là <strong>Hà Bảo</strong> — học sinh lớp 10A1 trường THPT Lê Lợi, đam mê sự giao thoa giữa công nghệ và nghệ thuật. Tôi thích tạo ra các sản phẩm số vừa đẹp về thẩm mỹ lẫn hiệu quả cao, từ giao diện web tinh tế đến các hệ thống phần mềm phức tạp. Với tư duy sáng tạo và nền tảng kỹ thuật vững chắc, tôi luôn cố gắng mang lại trải nghiệm tốt nhất cho người dùng. Rất mong được hợp tác và làm việc cùng bạn.`,
     tl: [
+      '<strong>Đạt giải Nhì — Kỳ thi Tin Học Trẻ cấp tỉnh năm 2026</strong>',
       '<strong>Đạt giải Nhì, môn Tin học — Kỳ thi học sinh giỏi cấp tỉnh năm học 2025–2026</strong>',
       '<strong>Thủ Khoa Tiếng Anh, Thủ Khoa Toán, Á Khoa Tổng — Kỳ thi tuyển sinh vào lớp 10 THPT 2025</strong>',
       '<strong>Đạt giải Khuyến Khích — Kỳ thi Tin Học Trẻ cấp tỉnh năm 2025</strong>',
