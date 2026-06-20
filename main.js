@@ -98,7 +98,7 @@ function handleSend(e) {
   const name = document.getElementById('c-name').value.trim();
   const email = document.getElementById('c-email').value.trim();
   const msg = document.getElementById('c-msg').value.trim();
-  const to = 'xthabao@gmail.com';
+  const to = 'xthavan@gmail.com';
   const sub = encodeURIComponent(`[Portfolio] Message from ${name}`);
   const body = encodeURIComponent(`Name:  ${name}\nEmail: ${email}\n\n${msg}`);
   window.open(`mailto:${to}?subject=${sub}&body=${body}`);
@@ -125,8 +125,9 @@ const translations = {
     label_phone: 'Phone',
     label_birthday: 'Birthday',
     label_address: 'Address',
-    about_html: `Hello! I'm <strong>Hà Bảo</strong> — a 10A1 student at Le Loi High School, passionate about the intersection of technology and art. I enjoy creating digital products that are both visually appealing and highly effective, from refined web interfaces to complex software systems. With a creative mindset and a solid technical foundation, I always strive to deliver the best possible experience for end users. I look forward to collaborating and working with you.`,
+    about_html: `Hello, I'm <strong>Hà Bảo (xthabao1)</strong>. I created this website on 11/2/2026 to record the achievements I have earned from grade 8 until now.`,
     tl: [
+      '<strong>Head of Organizing Committee — Le Loi Robotics Challenge, the first robotics competition of Le Loi High School</strong>',
       '<strong>2nd Prize — Provincial Young Programmers Contest (Tin Học Trẻ) 2026</strong>',
       '<strong>2nd Prize, Computer Science — Provincial Academic Excellence Competition 2025–2026</strong>',
       '<strong>1st Place English, 1st Place Math, 2nd Place Overall — Grade 10 High School Entrance Exam 2025</strong>',
@@ -143,7 +144,7 @@ const translations = {
     btn_send: 'Send',
     win_profile: 'profile.exe',
     win_portfolio: 'portfolio.app',
-    tagline: '10A1 &middot; K66<br>Le Loi High School',
+    tagline: 'A1 &middot; K66<br>Le Loi High School',
   },
   vi: {
     tab_about: 'Giới thiệu',
@@ -153,8 +154,9 @@ const translations = {
     label_phone: 'Điện thoại',
     label_birthday: 'Ngày sinh',
     label_address: 'Địa chỉ',
-    about_html: `Xin chào! Tôi là <strong>Hà Bảo</strong> — học sinh lớp 10A1 trường THPT Lê Lợi, đam mê sự giao thoa giữa công nghệ và nghệ thuật. Tôi thích tạo ra các sản phẩm số vừa đẹp về thẩm mỹ lẫn hiệu quả cao, từ giao diện web tinh tế đến các hệ thống phần mềm phức tạp. Với tư duy sáng tạo và nền tảng kỹ thuật vững chắc, tôi luôn cố gắng mang lại trải nghiệm tốt nhất cho người dùng. Rất mong được hợp tác và làm việc cùng bạn.`,
+    about_html: `Xin chào, tôi là <strong>Hà Bảo (xthabao1)</strong>. Tôi tạo trang web này vào ngày 11/2/2026 để lưu các thành tựu mà tôi đạt được từ lớp 8 đến giờ.`,
     tl: [
+      '<strong>Trưởng Ban tổ chức cuộc thi Lê Lợi Robotics Challenge đầu tiên của trường THPT Lê Lợi</strong>',
       '<strong>Đạt giải Nhì — Kỳ thi Tin Học Trẻ cấp tỉnh năm 2026</strong>',
       '<strong>Đạt giải Nhì, môn Tin học — Kỳ thi học sinh giỏi cấp tỉnh năm học 2025–2026</strong>',
       '<strong>Thủ Khoa Tiếng Anh, Thủ Khoa Toán, Á Khoa Tổng — Kỳ thi tuyển sinh vào lớp 10 THPT 2025</strong>',
@@ -171,7 +173,7 @@ const translations = {
     btn_send: 'Gửi',
     win_profile: 'hồ-sơ.exe',
     win_portfolio: 'portfolio.app',
-    tagline: '10A1 &middot; K66<br>THPT Lê Lợi',
+    tagline: 'A1 &middot; K66<br>THPT Lê Lợi',
   }
 };
 
@@ -243,3 +245,6 @@ function applyLang(lang) {
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.dataset.lang));
 });
+
+/* Apply default language on page load */
+applyLang('en');
